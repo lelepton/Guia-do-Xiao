@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tudo sobre o Xiao</title>
+    <title>Guia Rápido do Xiao</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <header>
         <div class="nome-icone">
-            <img src="/images/image.png" alt="Chibi do Xiao (Genshin Impact) usando sua máscara">
-            <h1>Tudo sobre o Xiao</h1>  
+            <img src="/images/xiao/cutest.png" alt="Chibi do Xiao (Genshin Impact) usando sua máscara">
+            <h1>Guia Rápido do Xiao</h1>  
         </div>
         
         <nav id="menu-desktop">
@@ -49,41 +49,78 @@
                 </p>
             </div>
 
+            <section class="container">
+                <button class="arrow-left control" aria-label="Previous image"><i class="fa-solid fa-arrow-left"></i></button>
+                <button class="arrow-right control" aria-label="Next image"><i class="fa-solid fa-arrow-right"></i></button>
+
+                <div class="galeria-wrapper">
+                    <div class="galeria">
+                        <img src="./images/xiao/bday2020.png" alt="" class="item current item">
+                        <img src="./images/xiao/bday2021.png" alt="" class="item">
+                        <img src="./images/xiao/bday2022.png" alt="" class="item">
+                        <img src="./images/xiao/bday2023.png" alt="" class="item">
+                        <img src="./images/xiao/bday2024.png" alt="" class="item">
+                        <img src="./images/xiao/bday2025.png" alt="" class="item">
+                    </div>
+                </div>
+            </section>
+            
+
             <div id="conteudo-principal">
                 <div class="grid-secoes">
                     <section id="artefatos">
                         <h3>Artefatos</h3>
                         <div class="card-artefato">
-                            <h4>Vermillion Hereafter</h4>
-                            <img src="" alt=""> foto
-                            <p>2p:</p>
-                            <p>4p:</p>
+                            <div>
+                                <img src="./images/artefatos/vh.png" alt="Flor Vermillion Hereafter">
+                                <h4>Além-vida Cinábrio</h4>
+                            </div>
+                            <p>2P: ATQ +18%</p>
+                            <p>4P: Após usar o Supremo, aumenta o ATQ em 8% por 16s. 
+                                Quando a Vida do personagem diminui, seu ATQ aumenta ainda mais em 10%. 
+                                Isso pode acumular até 4 vezes.</p>
+                            </p>
                         </div>
 
                         <div class="card-artefato">
-                            <h4>Maresussy Hunter</h4>
-                            <img src="" alt=""> foto
-                            <p>2p:</p>
-                            <p>4p:</p>
+                            <div>
+                                <img src="./images/artefatos/mh.png" alt="Flor Marechaussee Hunter">
+                                <h4>Caçador das Sombras</h4>
+                            </div>    
+                            <p>2P: Aumenta o Dano do Ataque Normal e do Ataque Carregado em 15%.</p>
+                            <p>4P: Quando a Vida atual aumenta ou diminui, aumenta a Taxa CRIT em 12%.
+                                Esse efeito dura 5s e pode ser acumulado até 3 vezes.
+                            </p>
                         </div>
 
                         <div class="card-artefato">
-                            <h4>Long Night's Oath</h4>
-                            <img src="" alt=""> foto
-                            <p>2p:</p>
-                            <p>4p:</p>
+                            <div>
+                                <img src="./images/artefatos/lno.png" alt="Flor do Long Night's Oath">
+                                <h4>Juramento da Noite Eterna</h4>
+                            </div>    
+                            <p>2P: Dano do Ataque Imersivo aumenta em 25%.</p>
+                            <p>4P: Ataques Imersivos ganham 1 acúmulo. Ataques Carregados e Habilidades 
+                                Elementais ganham 2 acúmulos. Um acúmulo pode ser ganho a cada 1 s, e cada 
+                                acúmulo aumenta o Dano do Ataque Imersivo em 15% por 6 s. Máximo de 5 acúmulos. 
+                                A duração de cada acúmulo é contada independentemente.
+                            </p>
                         </div>
 
                         <div class="card-artefato">
-                            <h4>Desert Pavillion</h4>
-                            <img src="" alt=""> foto
-                            <p>2p:</p>
-                            <p>4p:</p>
+                            <div>
+                                <img src="./images/artefatos/dpc.png" alt="Flor do Desert Pavillon Chronicled">
+                                <h4>Crônicas do Pavilhão do Deserto</h4>
+                            </div>  
+                            <p>2P: Bônus de Dano Anemo +15%.</p>
+                            <p>4P: Quando um Ataque Carregado atinge um inimigo, aumenta a Vel. de ATQ do
+                                Ataque Normal desse Personagem em 10% e aumenta o Dano inflingido por Ataques
+                                Normais, Carregados e Imersivos em 40% por 15s.
+                            </p>
                         </div>
 
                         <div class="card-artefato">
                             <h4>Any 2p atk or anemo</h4>
-                            <img src="" alt=""> foto
+                            <img src="" alt="">
                         </div>
                     </section>
 
@@ -116,14 +153,51 @@
                     </section>
 
                     <section id="times">
+                        <h3>Times</h3>
                         <div class="grid-times">
-                            <div class="personagens">
-                                <img src="" alt="">foto
-                                <img src="" alt="">foto
-                                <img src="" alt="">foto
-                                <img src="" alt="">foto
+                            <div class="card-time">
+                                <p>FFXX</p>
+                                <div>
+                                    <img src="./images/personagens/xiao.png" alt="Xiao">
+                                    <img src="./images/personagens/faruzan.png" alt="Faruzan">
+                                    <img src="./images/personagens/furina.png" alt="Furina">
+                                    <img src="./images/personagens/xianyun.png" alt="Xianyun">
+                                </div>  
+                                <p>Faruzan Q > Furina EQ > Xianyun EPQ > Xiao EEQ</p>
                             </div>
-                            <p>ordem de rotação aqui</p>
+
+                            <div class="card-time">
+                                <p>Holy Attack</p>
+                                <div>
+                                    <img src="./images/personagens/xiao.png" alt="Xiao">
+                                    <img src="./images/personagens/faruzan.png" alt="Faruzan">
+                                    <img src="./images/personagens/iansan.png" alt="Iansan">
+                                    <img src="./images/personagens/benny.png" alt="Bennett">
+                                </div>
+                                <p>Faruzan Q > Bennett EQ > Iansan ECAQ > Xiao EEQ</p>
+                            </div>
+
+                            <div class="card-time">
+                                <p>Double Geo</p>
+                                <div>
+                                    <img src="./images/personagens/xiao.png" alt="Xiao">
+                                    <img src="./images/personagens/faruzan.png" alt="Faruzan">
+                                    <img src="./images/personagens/zhongli.png" alt="Zhongli">
+                                    <img src="./images/personagens/albedo.png" alt="Albedo">
+                                </div>
+                                <p>ordem de rotação aqui</p>
+                            </div>
+                            
+                            <div class="card-time">
+                                <p>F2P</p>
+                                <div>
+                                    <img src="./images/personagens/xiao.png" alt="Xiao">
+                                    <img src="./images/personagens/faruzan.png" alt="Faruzan">
+                                    <img src="" alt="">
+                                    <img src="" alt="">
+                                </div>
+                                <p>ordem de rotação aqui</p>
+                            </div>       
                         </div>
                     </section>
 
