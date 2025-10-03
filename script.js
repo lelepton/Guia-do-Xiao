@@ -1,47 +1,39 @@
 const btnToggle = document.getElementById('btn-toggle');
+const btnTema = document.getElementById('btn-tema');
 const menuMobile = document.getElementById('menu-mobile');
-const controls = document.querySelectorAll('.control');
 
 btnToggle.addEventListener('click', () => {
-    if (menuMobile.classList.contains('show')) {
-        menuMobile.classList.remove('show');
-        btnToggle.innerHTML = `<i class="fa-solid fa-bars"></i>`
+    menuMobile.classList.toggle('show');
+    btnToggle.innerHTML = menuMobile.classList.contains('show')
+        ? `<i class="fa-solid fa-xmark"></i>`
+        : `<i class="fa-solid fa-bars"></i>`;
+});
+
+btnTema.addEventListener("click", () => {
+    if (document.documentElement.hasAttribute("tema")) {
+        document.documentElement.removeAttribute("tema");
+        btnTema.innerHTML = `<i class="fa-solid fa-moon"></i>`;
     } else {
-        menuMobile.classList.add('show');
-        btnToggle.innerHTML = `<i class="fa-solid fa-xmark"></i>`
+        document.documentElement.setAttribute("tema", "dark");
+        btnTema.innerHTML = `<i class="fa-solid fa-sun"></i>`;
     }
 })
 
-let currentItem = 0;
-const items = document.querySelectorAll('.item');
-const maxItems = items.length;
+let currentIndex = 0;
+const galeria = document.querySelector('.galeria');
+const slides = document.querySelectorAll('.galeria img');
+const totalSlides = slides.length;
 
-controls.forEach(control => {
-    control.addEventListener('click', () => {
-        const isLeft = control.classList.contains('arrow-left');
+function showSlide(index) {
+    galeria.style.transform = `translateX(-${index * 320}px)`;
+    slides.forEach(img => img.classList.remove('active'));
+    slides[index].classList.add('active');
+}
 
-        if (isLeft) {
-            currentItem -= 1;
-        } else {
-            currentItem += 1;
-        }
+function nextSlide() {
+    currentIndex = (currentIndex + 1) % totalSlides;
+    showSlide(currentIndex);
+}
 
-        if (currentItem >= maxItems) {
-            currentItem = 0;
-        }
-
-        if (currentItem < 0) {
-            currentItem = maxItems - 1;
-        }
-
-        items.forEach(item => item.classList.remove('current-item'));
-
-        items[currentItem].scrollIntoView({
-            inline: 'center',
-            behavior: 'smooth'
-        });
-
-        items[currentItem].classList.add('current-item');
-    })
-});
-
+setInterval(nextSlide, 3000);
+showSlide(currentIndex);
