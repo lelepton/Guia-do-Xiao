@@ -1,6 +1,6 @@
 :root {
     --fundo-principal: #f1f1e6;
-    --destaque-secundario: #4a55a5;
+    --destaque-secundario: #a4adf3;
     --texto-principal: #02000c;
     --destaque-principal: #3bb49a;
     --fundo-card: #cae8dd;
@@ -10,6 +10,7 @@
 
 [tema="dark"] {
     --fundo-principal: #1a1b1e;
+    --destaque-secundario: #4a55a5;
     --texto-principal: #e6e6e6;
     --fundo-card: #242529;
     --fundo-card-hover: #2f3036;
@@ -122,7 +123,6 @@ main .grid {
     display: grid;
     gap: 1rem;
     grid-template-columns: 1fr;
-    padding: 1rem;
 }
 
 main #sobre {
@@ -138,42 +138,30 @@ main #conteudo-secundario p {
     text-align: justify;
 }
 
-main .container {
-    position: relative;
-    max-width: 320px;
-    margin: 1rem auto;
+
+#videos {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    margin: 0 2rem;
 }
 
 section {
     scroll-margin-top: 70px;
 }
 
-.galeria-wrapper {
-    overflow: hidden;
-    border-radius: 1rem;
-}
-
-.galeria {
-    display: flex;
-    transition: transform 0.6s ease;
-}
-
-.galeria img {
-    width: 320px;
-    height: 320px;
-    object-fit: cover;
-    flex-shrink: 0;
-    opacity: 0.6;
-    transition: opacity .3s ease-in-out;
-}
-
-.galeria img.active {
-    opacity: 1;
-}
-
 .grid-secoes {
     display: grid;
     gap: 2rem;
+}
+
+#artefatos .grid-cards,
+#armas .grid-cards,
+#times .grid-cards {
+    display: grid;
+    grid-template-columns: 1fr;
 }
 
 #artefatos .card-artefato,
@@ -228,9 +216,10 @@ section {
 
 #armas img,
 #artefatos img,
-#times img {
-    width: 60px;
-    height: 60px;
+#times img,
+#contato img {
+    width: 72px;
+    height: 72px;
 }
 
 .container-times {
@@ -251,6 +240,50 @@ section {
     margin-bottom: 15px;
 }
 
+#parallax {
+    background: url(./images/xiao/xiaolumi.png) center / cover no-repeat fixed;
+    width: 100%;
+    height: 200px;
+}
+
+#contato {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#grupo-form {
+    background-color: var(--destaque-secundario);
+    border-radius: 1rem;
+    width: 70%;
+    height: auto;
+    margin: 1rem auto;
+}
+
+#contato form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.5rem;
+}
+
+#contato form button {
+    background-color: var(--destaque-principal);
+    color: var(--fundo-principal);
+    width: 20%;
+    border: none;
+    padding: 0.8rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color .5s ease;
+    margin: 0 auto;
+}
+
+#contato form button:hover {
+    background-color: var(--texto-principal);
+}
+
 .container-form {
     display: flex;
     gap: 1rem;
@@ -267,6 +300,10 @@ textarea {
     border-radius: 5px;
     resize: none;
     color: var(--texto-principal);
+}
+
+textarea {
+    height: 7rem;
 }
 
 footer {
@@ -291,6 +328,20 @@ footer {
     #btn-toggle {
         display: none;
     }
+
+    #videos {
+        flex-direction: row;
+    }
+
+    #artefatos .grid-cards,
+    #armas .grid-cards {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #times img.personagem {
+        width: 96px;
+        height: 96px;
+    }
 }
 
 @media (min-width: 1024px) {
@@ -303,7 +354,16 @@ footer {
         gap: 3rem;
     }
 
-    .grid-secoes {
+    #armas .grid-cards {
         grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    #times .grid-cards {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #times img.personagem {
+        width: 128px;
+        height: 128px;
     }
 }
