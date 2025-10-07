@@ -268,8 +268,9 @@ section {
 #artefatos img,
 #times img,
 #contato img {
-    width: 72px;
-    height: 72px;
+    width: 64px;
+    height: 64px;
+    margin-bottom: 1rem;
 }
 
 .container-times {
